@@ -1046,6 +1046,52 @@ li + li { margin-top: 7px; }
     text-align: center;
     scroll-snap-align: start;
   }
+  .hero {
+    padding: 42px 0 30px;
+  }
+  .hero h1 {
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 1.04;
+  }
+  .hero .lede {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .grid {
+    gap: 12px;
+    padding: 18px 0 30px;
+  }
+  .panel {
+    padding: 18px 16px;
+    border-color: rgba(42, 33, 26, .14);
+    border-radius: 6px;
+    background: rgba(255, 253, 248, .82);
+    box-shadow: none;
+  }
+  .panel h2 {
+    font-size: 28px;
+  }
+  .panel h3 {
+    font-size: 17px;
+  }
+  .copy {
+    padding: 13px 14px;
+    border-color: rgba(139, 87, 56, .24);
+    background: rgba(255, 250, 241, .72);
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.58;
+  }
+  .panel ul,
+  .panel ol {
+    padding-left: 18px;
+  }
+  .panel li {
+    line-height: 1.55;
+  }
   .home-intro {
     padding: 18px 0 26px;
   }
