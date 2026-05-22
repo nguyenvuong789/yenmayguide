@@ -1005,18 +1005,84 @@ li + li { margin-top: 7px; }
 
 @media (max-width: 520px) {
   .shell {
-    width: calc(100% - 32px);
-    max-width: calc(100vw - 32px);
+    width: calc(100% - 24px);
+    max-width: calc(100vw - 24px);
+  }
+  .topbar {
+    position: sticky;
+  }
+  .nav {
+    gap: 10px;
+    min-height: 0;
+    padding: 10px 0 9px;
+  }
+  .brandmark {
+    width: 100%;
+    font-size: 16px;
   }
   .navlinks {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 8px;
-    row-gap: 8px;
+    display: flex;
+    width: calc(100vw - 24px);
+    margin-right: -12px;
+    padding: 0 12px 2px 0;
+    gap: 7px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .navlinks::-webkit-scrollbar {
+    display: none;
   }
   .navlinks a {
-    font-size: 13px;
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 7px 12px;
+    border-color: rgba(42, 33, 26, .12);
+    background: rgba(255, 253, 248, .55);
+    font-size: 12px;
+    line-height: 1.2;
     text-align: center;
+    scroll-snap-align: start;
+  }
+  .home-intro {
+    padding: 18px 0 26px;
+  }
+  .home-intro::before {
+    background:
+      radial-gradient(circle at 8% 10%, rgba(122, 31, 24, .08), transparent 34%),
+      radial-gradient(circle at 92% 74%, rgba(79, 95, 72, .10), transparent 35%);
+  }
+  .intro-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .intro-visual {
+    order: -1;
+    width: 100%;
+  }
+  .intro-copy h1 {
+    max-width: 100%;
+    font-size: 34px;
+    line-height: 1.02;
+  }
+  .intro-copy .lede {
+    max-width: 100%;
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .intro-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .intro-actions .action {
+    min-height: 42px;
+    width: 100%;
   }
   .home-hero-grid {
     display: block;
@@ -1053,44 +1119,101 @@ li + li { margin-top: 7px; }
   .home-statement h2 {
     font-size: 32px;
   }
-  .intro-actions .action {
-    width: 100%;
-  }
   .doc-guide div {
     grid-template-columns: 30px minmax(0, 1fr);
     gap: 8px 10px;
+    padding: 11px 12px;
+  }
+  .doc-guide strong,
+  .doc-guide em {
+    font-size: 13px;
   }
   .doc-guide em {
     grid-column: 2;
   }
   .intro-photo {
-    height: 320px;
+    height: 238px;
+    border-color: rgba(42, 33, 26, .12);
   }
   .intro-visual figcaption {
-    position: static;
-    width: 100%;
-    border-top: 0;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: min(230px, calc(100% - 20px));
+    padding: 11px 12px 10px;
+    border: 1px solid rgba(42, 33, 26, .14);
+    background: rgba(255, 253, 248, .90);
   }
   .intro-visual figcaption img {
-    width: 150px;
+    width: 118px;
+    margin-bottom: 5px;
+  }
+  .intro-visual figcaption span {
+    font-size: 11px;
   }
   .quick-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 14px;
+  }
+  .quick-facts div {
+    padding: 13px 12px;
+  }
+  .quick-facts span {
+    font-size: 10px;
+  }
+  .quick-facts strong {
+    font-size: 13px;
   }
   .plan-steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .plan-step {
     min-height: 0;
+    padding: 14px 12px;
   }
   .plan-step span {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+  .plan-step strong {
+    font-size: 22px;
+  }
+  .plan-step em {
+    font-size: 12px;
+  }
+  .focus-block {
+    padding: 34px 0;
+  }
+  .focus-block h2 {
+    font-size: 31px;
+  }
+  .focus-block p:not(.eyebrow) {
+    font-size: 15px;
+  }
+  .section-heading h2,
+  .section-heading.compact h2 {
+    font-size: 30px;
+  }
+  .reading-section {
+    padding-top: 34px;
   }
   .reading-list a {
     grid-template-columns: 38px minmax(0, 1fr);
     gap: 10px 14px;
   }
+  .reading-list strong {
+    font-size: 23px;
+  }
+  .reading-list em {
+    font-size: 13px;
+  }
   .reading-list em {
     grid-column: 2;
+  }
+  .next-grid {
+    padding-top: 34px;
+  }
+  .next-grid article {
+    padding: 20px 18px;
   }
 }
